@@ -5,7 +5,8 @@ This is a example application using omnicontacts
 This demo app shows how to import contacts from gmail and yahoo. The demo uses Jquery UI tab as well.
 
 ## Features 
-* The oauth login is displayed in a popup window and once authorized, the data is fetched and displayed in the main window after closing the popup window. *The omnicontacts keys are loaded via an yml file “omnicontacts_keys.yml” . This contains the key for various environments. 
+* The oauth login is displayed in a popup window and once authorized, the data is fetched and displayed in the main window after closing the popup window. 
+* The omnicontacts keys are loaded via an yml file “omnicontacts_keys.yml” . This contains the key for various environments. 
 * Functionality of reconnecting to an account in order to fetch new data. 
 * Logout from account (logout from gmail , yahoo) available
 
