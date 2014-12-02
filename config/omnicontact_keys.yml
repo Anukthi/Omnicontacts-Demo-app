@@ -1,0 +1,15 @@
+development: 
+  yahoo: 
+    client_id: "dj0yJmk9cEt4dTVLcEhvODh1JmQ9WVdrOWNteEtaMlJKTjJFbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1lZg--"
+    client_secret: "f0b7b226b4d97ae784fa9bc868e50f7b76b8e656"
+  gmail: 
+    client_id: "109302943086-uiahimrb811n4emqahe4gmjbneuch84l.apps.googleusercontent.com"
+    client_secret: "8F5-VhckKioIIMN1tgxL7zD8"
+
+production: 
+  yahoo: 
+    client_id: "dj0yJmk9SFdJRFR1bFRWSnhKJmQ9WVdrOVprVlRhbkpVTkdjbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1mZA--"
+    client_secret: "8b7fc519670578fc8aa1d6c08bddf679b1004174"
+  gmail: 
+    client_id: "109302943086-uiahimrb811n4emqahe4gmjbneuch84l.apps.googleusercontent.com"
+    client_secret: "8F5-VhckKioIIMN1tgxL7zD8"

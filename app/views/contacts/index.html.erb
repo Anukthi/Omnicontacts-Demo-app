@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+
+<div id="vtabs">
+  <ul>
+    <li><a href='#gmail_address_book' width>GMAIL</a></li>
+    <li><a href='#yahoo_address_book'>YAHOO</a></li>
+  </ul>
+  <div id="gmail_address_book">
+  	Connect to gmail account using the button below. Once connected the contacts will be displayed here.
+    <div id="gmail_address_book_data">
+      <button type="button" data-href="/contacts/gmail" id="gmail" >Connect to Gmail</button>
+    </div>
+  </div>
+  <div id="yahoo_address_book">
+  	Connect to yahoo account using the button below. Once connected the contacts will be displayed here.
+    <div id="yahoo_address_book_data">
+      <button type="button" data-href="/contacts/yahoo" id="yahoo" >Connect to Yahoo</button>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    ImportaddressBook.init();
+  });
+</script>
+

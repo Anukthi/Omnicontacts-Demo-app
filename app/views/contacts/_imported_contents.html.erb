@@ -1,0 +1,8 @@
+<script type="text/javascript">
+	<%if @called_from == "display_imported_contacts"%>
+	  window.opener.jQuery("#<%=@provider_section%>","#" + window.opener.current_dialog).html("<%=raw escape_javascript(render(:partial => 'display_imported_contacts',:locals=>{:contacts => @contacts,:provider=>@provider,:error_message=>@error_message.html_safe})) %>");
+	<%else%>
+	  window.opener.jQuery("#<%=@provider_section%>","#" + window.opener.current_dialog).html("<%=raw escape_javascript(render(:partial => 'display_imported_contacts',:locals=>{:contacts => @contacts,:error_message =>@error_message.html_safe,:provider =>@provider})) %>");
+	<%end%>
+	window.close();
+</script>

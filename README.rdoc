@@ -1,0 +1,32 @@
+<h1>Omnicontacts Demo App</h1>
+This is a example application using omnicontacts
+
+This demo app shows how to import contacts from gmail and yahoo.
+The demo uses Jquery UI tab as well.
+
+<h2>Features</h2>
+<ul>
+<li>The oauth login is displayed in a popup window and once authorized, the data is fetched and displayed in the main window after closing the popup window.</li>
+<li>The omnicontacts keys are loaded via an yml file "omnicontacts_keys.yml" . This contains the key for various environments.</li>
+<li>Functionality of reconnecting to  an account in order to fetch new data.</li>
+<li>Logout from account (logout from gmail , yahoo) available</li>
+</ul>
+
+
+
+<h2>To register application</h2>
+<ul>
+<li>For Gmail : Google API Console</li>
+
+<li>For Yahoo : Yahoo Developer Network</li>
+
+<li>For Hotmail : Microsoft Developer Network</li>
+
+<li>For Facebook : Facebook Developers</li>
+</ul>
+
+P.S : In order to run this demo app please make sure that the app is registered and the keys are changed.
+
+Note:
+When registering the application in gmail for development mode, "localhost:3000" can be registered.<br/>
+When registering tyhe application for yahoo for development mode "localhost" cannot be registered so make an entry in the etc/hosts file and register the app.

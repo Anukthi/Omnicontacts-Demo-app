@@ -1,0 +1,46 @@
+<table style="width: 100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>Name</td>
+    <td>Email</td>
+  </tr>
+</table>
+
+<div style="overflow: auto;height: 100px; width: 99.8%;height:400px;">
+  <table style="width: 99.8%;" cellpadding="0" cellspacing="0" frame="box">
+    <% contacts.each_with_index do |person,index|-%>
+      <tr>
+        <td><%=person[:name]%></td>
+        <td><%=person[:email] %></td>
+      </tr>
+    <%end%>
+  </table>
+</div>
+
+
+<div style="width: 330px;display: inline-block;left: -12px; position:relative;">
+  <%if provider == "gmail"%>
+    <button type="button" data-href="/contacts/gmail" id="gmail" class="connect_again_<%=provider%>" style="float:left;top:0; font-size:11px">Re-connect to Gmail</button>
+    <button type="button" data-href="/contacts/gmail" id="gmail" name="another_<%=provider%>" style="display:none; font-size:11px;top:0;">Connect to another Gmail account</button>
+    <a href="#" id="logoutText_<%=provider%>" target='gmailIFrame' onclick="gmailIFrame.location='https://www.google.com/accounts/Logout';startLogoutPolling('<%=provider%>');return false;" style="color:#44A8C2;float: left;position: relative;top: 0;left: 15px;"> Logout from Gmail</a>
+    <iframe name='gmailIFrame' id="gmailIFrame" style='display:none'></iframe>
+  <%elsif provider =="yahoo"%>
+    <button type="button" data-href="/contacts/yahoo" id="yahoo"  style="font-size:11px;float:left;top:0;" class="connect_again_<%=provider%>">Re-connect to Yahoo</button>
+    <button type="button" data-href="/contacts/yahoo" id="yahoo" name="another_<%=provider%>" style="display:none; font-size:11px;top:0;">Connect to another Yahoo account</button>
+    <a href="#"  id="logoutText_<%=provider%>" target='yahooIFrame' onclick="yahooIFrame.location='https://login.yahoo.com/config/login?logout=1';startLogoutPolling('<%=provider%>');return false;" style="color:#44A8C2;float: left;position: relative;top: 0;left: 15px;"  class="left"> Logout from Yahoo</a>
+        <iframe name='yahooIFrame' id="yahooIFrame" style='display:none'></iframe>
+  <%else%>
+  <%end%>
+</div>
+
+
+<% if contacts.empty?%>
+<div id="<%=provider%>_table_error" class="table_error">
+  <%=error_message%>
+</div>
+<%end%>
+
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    ImportaddressBook.init();
+  });
+</script>
